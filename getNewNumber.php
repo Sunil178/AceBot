@@ -11,7 +11,6 @@ function getOperatorWiseNumber($product, $operator){
 		$ch = curl_init();
 		$country = 'india';
 		
-
 		curl_setopt($ch, CURLOPT_URL, 'https://5sim.net/v1/user/buy/activation/' . $country . '/' . $operator . '/' . $product);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');

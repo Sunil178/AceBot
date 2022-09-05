@@ -15,13 +15,13 @@ if (isset($_POST['ipv4']) && isset($_POST['ipv6'])) {
         $response = [];
         if ($mobile_data) {
                 if ($mobile_data->num_rows > 0) {
-                   $response['code'] = 'false';
+                   $response['code'] = false;
                 } else {
-                   $response['code'] = 'true';
+                   $response['code'] = true;
                 }
         }
         else
-           $response['code'] = 'true';
+           $response['code'] = true;
         $conn->close();
         echo json_encode($response);
 }
